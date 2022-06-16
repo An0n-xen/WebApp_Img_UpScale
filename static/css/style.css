@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #61729e ,white );
+    /*#1574EB #61729e*/
+}
+
+#nav_bar{
+    background-color: white;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#nav_bar a{
+    text-decoration: none;
+}
+
+#nav_bar a p{
+    padding-left: 20px;
+}
