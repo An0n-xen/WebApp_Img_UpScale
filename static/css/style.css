@@ -1,8 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to right, #61729e ,white );
-    /*#1574EB #61729e*/
 }
 
 #nav_bar{
@@ -11,6 +9,7 @@ body{
     font-weight: bold;
     font-size: 20px;
     font-family: monospace;
+    box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
 }
 
 #nav_bar a{
@@ -19,4 +18,133 @@ body{
 
 #nav_bar a p{
     padding-left: 20px;
+}
+
+.Intro{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    float: left;
+    width: 300px;
+}
+
+.upload-div{
+    position: relative;
+    width: 430px;
+    right: 0;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.45);
+    padding: 30px;
+    box-shadow: 10px 10px 12px rgba(0,0,0,0.05);
+}
+
+.header{
+    position: relative;
+    height: 500px;
+    padding: 20px;
+    padding-bottom: 80px;
+    margin-bottom: 30px;
+
+    background-image: linear-gradient(to bottom, #1574EB ,white 70% );
+    /*#1574EB #61729e*/
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+#file-input{
+    opacity: 0;
+    padding: 80px;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.Intro-upload-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.upload-div header{
+    color: #646772;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Poppins",sans-serif;
+}
+
+.upload-footer{
+    opacity: 0.9;
+    position: absolute;
+    text-align: right;
+    
+    color: black;
+
+    font-weight: bold;
+    font-family:sans-serif;
+    font-size: 13px;
+
+    width: 455px;
+    
+   
+    left: 0;
+    bottom: 0;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.upload-div form{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+#form-input{
+    position: relative;
+    padding: 10px;
+    padding-bottom: 25px;
+    margin: 30px 0;
+    border-radius: 5px;
+    border: 2.5px dashed #6990F2;
+}
+
+#form-input:hover{
+    border: 2.5px solid rgb(0, 19, 128);
+}
+
+#upload-text-ui{
+    position: absolute;
+    left: 30%;
+    top: 20%;
+
+    text-align: center;
+
+    font-size: 16px;
+    margin-top: 15px;
+    color: #6990F2;
+    font-family: "Poppins",sans-serif;
+}
+
+
+#upload-text-ui p{
+    font-weight: bolder;
+}
+
+#upload-btn{
+    background-color:white;
+    font-weight: bold;
+    color: #646772;
+    border: 3px solid #6990F2;
+    border-radius:8px;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+#upload-btn:hover{
+    border: 3px solid rgb(0, 19, 128);
 }

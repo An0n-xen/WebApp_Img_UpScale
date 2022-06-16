@@ -1,0 +1,73 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+
+<div class="header">
+
+    <div class="Intro-upload-div">
+        <div class="Intro">
+            <p>Another shit is real</p>
+        </div>
+        
+        <div class="upload-div">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <header> AI Image Up Scaler </header>
+                <div id="form-input">
+                    <input type="file" name="Images" multiple="true" required id="file-input">
+                    
+                    <div id="upload-text-ui">
+                        <img src="/static/upload.png"  height="50" width="70" alt="" id="upload-img">
+                        <img src="/static/upload_chg.png"  height="50" width="70" alt="" id="upload-chg-img" style="display:none;">
+                        <p id="upload-p">Browse File to Upload</p>
+                    </div>
+                    
+                </div>
+
+                <input type="submit" value="Upload" id="upload-btn">
+            </form>
+
+            <div class="upload-footer">
+                Powered By ESRGAB
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    
+</div>
+
+<script>
+
+    let upload_par = document.querySelector('#upload-p');
+    let upload_box = document.querySelector('#form-input');
+
+    let upload_img = document.querySelector('#upload-img');
+    let upload_img_chg = document.querySelector('#upload-chg-img');
+
+    upload_box.addEventListener('mouseover',() => {
+        upload_par.style.color = 'rgb(0, 19, 128)';
+
+        // Making first img display none
+        upload_img.style.display = "none";
+
+        // Making hover img display inline
+        upload_img_chg.style.display = 'inline';
+        
+    });
+
+    upload_box.addEventListener('mouseout',() => {
+        upload_par.style.color = '#6990F2';
+
+        // Making first img display inline
+        upload_img.style.display = "inline";
+
+        // Making hover img display none
+        upload_img_chg.style.display = 'none';
+        
+        
+    });
+</script>
+
+{% endblock content %}
