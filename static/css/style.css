@@ -76,11 +76,12 @@ body{
 
 #Upscale{
     position: absolute;
+    opacity: 0.60;
     font-family: "Dont";
     font-size: 100px;
     font-weight: bold;
     bottom: 350px;
-    left: 30px;  
+    left: 200px;  
     z-index: 1;
     color: rgb(21, 84, 156);
 }
@@ -169,6 +170,19 @@ body{
     padding-bottom: 5px;
 }
 
+.upload-header{
+    margin: 0;
+    padding: 0;
+}
+
+#up_head{
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: monospace,sans-serif;
+    color: rgb(23, 192, 59);
+}
+
 .upload-div form{
     height: 400px;
     display: flex;
@@ -216,6 +230,7 @@ body{
     border: 3px solid #6990F2;
     border-radius:8px;
     margin-top: 10px;
+    margin-bottom: 0px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;

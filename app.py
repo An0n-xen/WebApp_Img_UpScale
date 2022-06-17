@@ -29,8 +29,11 @@ def uploadfiles():
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
 
-    return "File Upload Nicely"
+    return redirect('/upload_page')
     
+@app.route('/upload_page')
+def uploadpage():
+    return render_template('layout.html')
 
 
 if __name__ == "__main__":
