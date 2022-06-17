@@ -1,7 +1,18 @@
 @font-face {
     font-family: "Dont";
-    src: url(/fonts/RobloxFontRegular.otf);
+    src: url(/static/fonts/waltograph42.ttf) format('truetype');
 }
+
+@font-face {
+    font-family: "AI";
+    src: url(/static/fonts/Rowstead\ Demo.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Sec";
+    src: url(/static/fonts/Wadezix\ Regular\ Demo.ttf) format('truetype');
+}
+
 
 body{
     margin: 0;
@@ -21,9 +32,21 @@ body{
     text-decoration: none;
 }
 
+.container-fluid{
+    text-align: center;
+    display: inline;
+}
+
+
 #nav_bar a p{
     padding-left: 20px;
-    
+    font-family: "Sec";
+    color: rgb(243, 3, 3);
+    font-weight: bolder;
+}
+
+#nav_bar a p:hover{
+    text-shadow: 1px 1px 1px  #332f2f;
 }
  
 .header{
@@ -47,8 +70,19 @@ body{
     justify-content: center;
 }
 
-.Intro p{
+.Intro img{
+    z-index: 2;
+}
+
+#Upscale{
+    position: absolute;
     font-family: "Dont";
+    font-size: 100px;
+    font-weight: bold;
+    bottom: 350px;
+    left: 30px;  
+    z-index: 1;
+    color: rgb(21, 84, 156);
 }
 
 #brain{
@@ -112,7 +146,7 @@ body{
     font-size: 27px;
     font-weight: 600;
     text-align: center;
-    font-family: "Poppins",sans-serif;
+    font-family: "AI";
 }
 
 .upload-footer{

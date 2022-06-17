@@ -15,6 +15,11 @@
     grid-template-rows: auto auto;
 }
 
+
+.contain-fluid{
+    display: none;
+}
+
 .upload-div2{
     font-family: "hello";
     color: pink;
