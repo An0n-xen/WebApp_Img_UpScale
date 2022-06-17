@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "make";
+    src: url(/fonts/Backslash-RpJol.otf);
+}
+
+
+.header2{
+    background-color: red;
+    height: 100vh;
+}
+
+.Intro-upload-div2{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.upload-div2{
+    font-family: "hello";
+    color: pink;
+}
+
+@media  screen and (max-width : 50rem) {
+    .header2{
+        background-color: blue;
+    }
+}

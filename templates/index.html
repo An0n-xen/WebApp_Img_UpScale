@@ -5,33 +5,41 @@
 <div class="header">
 
     <div class="Intro-upload-div">
+        
         <div class="Intro">
-            <p>Another shit is real</p>
+            <p>Up Scale Images </p>
+            <img src="/static/ai4.png" alt="">
+            <img src="/static/ai6.png" alt="" width="12%" height="18%" id="brain">
         </div>
         
-        <div class="upload-div">
-            <form action="/upload" method="POST" enctype="multipart/form-data">
-                <header> AI Image Up Scaler </header>
-                <div id="form-input">
-                    <input type="file" name="Images" multiple="true" required id="file-input">
-                    
-                    <div id="upload-text-ui">
-                        <img src="/static/upload.png"  height="50" width="70" alt="" id="upload-img">
-                        <img src="/static/upload_chg.png"  height="50" width="70" alt="" id="upload-chg-img" style="display:none;">
-                        <p id="upload-p">Browse File to Upload</p>
+        <div class="upload-center">
+            <div class="upload-div">
+
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <header> AI Image Up Scaler </header>
+                    <div id="form-input">
+                        <input type="file" name="Images" multiple="true" required id="file-input">
+                        
+                        <div id="upload-text-ui">
+                            <img src="/static/upload.png"  height="50" width="70" alt="" id="upload-img">
+                            <img src="/static/upload_chg.png"  height="50" width="70" alt="" id="upload-chg-img" style="display:none;">
+                            <p id="upload-p">Browse File to Upload</p>
+                        </div>
+                        
                     </div>
-                    
+    
+                    <input type="submit" value="Upload" id="upload-btn">
+                </form>
+    
+                <div class="upload-footer">
+                    Powered By ESRGAN
                 </div>
-
-                <input type="submit" value="Upload" id="upload-btn">
-            </form>
-
-            <div class="upload-footer">
-                Powered By ESRGAB
+    
             </div>
-
         </div>
+        
     </div>
+    
 </div>
 
 <div class="footer">

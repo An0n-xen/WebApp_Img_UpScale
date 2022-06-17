@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Dont";
+    src: url(/fonts/RobloxFontRegular.otf);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -18,27 +23,9 @@ body{
 
 #nav_bar a p{
     padding-left: 20px;
+    
 }
-
-.Intro{
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-    float: left;
-    width: 300px;
-}
-
-.upload-div{
-    position: relative;
-    width: 430px;
-    right: 0;
-    background-color: #fff;
-    border-radius: 15px;
-    border: 1px solid rgba(0,0,0,0.45);
-    padding: 30px;
-    box-shadow: 10px 10px 12px rgba(0,0,0,0.05);
-}
-
+ 
 .header{
     position: relative;
     height: 500px;
@@ -46,12 +33,70 @@ body{
     padding-bottom: 80px;
     margin-bottom: 30px;
 
+    text-align: center;
+
     background-image: linear-gradient(to bottom, #1574EB ,white 70% );
-    /*#1574EB #61729e*/
+    /*#1574EB #61729e */
+} 
+  
+.Intro{
+    position: relative;
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer{
+.Intro p{
+    font-family: "Dont";
+}
+
+#brain{
+    position: absolute;
+    filter: brightness(50%);
+    right: 90px;
+    top: 90px;
+}
+
+.Intro img{
+    padding: 0px;
+}
+
+.Intro-upload-div{
+    position: relative;
+    display:grid;
+    grid-template-columns: auto auto;
+    top: 100px;
+    width: 100%;
+}
+
+ .footer{
     margin-top: 20px;
+} 
+
+.upload-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width:70rem){
+    .upload-center{
+        grid-column-start: 1;
+    }
+}
+
+
+.upload-div{
+    position: relative;
+    width: 430px;
+
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.45);
+    padding: 30px;
+    box-shadow: 10px 10px 12px rgba(0,0,0,0.05);
 }
 
 #file-input{
@@ -61,10 +106,6 @@ body{
     border: 1px solid black;
 }
 
-.Intro-upload-div{
-    display: flex;
-    flex-direction: row;
-}
 
 .upload-div header{
     color: #646772;
@@ -100,6 +141,7 @@ body{
     align-items: center;
     justify-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 #form-input{
@@ -148,3 +190,4 @@ body{
 #upload-btn:hover{
     border: 3px solid rgb(0, 19, 128);
 }
+
