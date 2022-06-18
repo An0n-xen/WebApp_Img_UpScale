@@ -13,7 +13,6 @@
     src: url(/static/fonts/Wadezix\ Regular\ Demo.ttf) format('truetype');
 }
 
-
 body{
     margin: 0;
     padding: 0;
@@ -36,7 +35,6 @@ body{
     text-align: center;
     display: inline;
 }
-
 
 #nav_bar a p{
     padding-left: 20px;
@@ -116,12 +114,6 @@ body{
     text-align: center;
 }
 
-@media screen and (max-width:70rem){
-    .upload-center{
-        grid-column-start: 1;
-    }
-}
-
 
 .upload-div{
     position: relative;
@@ -140,7 +132,6 @@ body{
     margin: 0;
     border: 1px solid black;
 }
-
 
 .upload-div header{
     color: #646772;
@@ -218,7 +209,6 @@ body{
     font-family: "Poppins",sans-serif;
 }
 
-
 #upload-text-ui p{
     font-weight: bolder;
 }
@@ -234,9 +224,102 @@ body{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    }
+}
 
 #upload-btn:hover{
     border: 3px solid rgb(0, 19, 128);
 }
 
+.main-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.left{
+    width: 25vw;
+    height: 100vh;
+    border-right:1px solid rgba(0, 0, 0, 0.678);
+}
+
+.middle{
+    text-align: center;
+    padding: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* box-shadow: 7px 7px 9px rgba(0,0,0,0.05), -7px 7px 9px rgba(0,0,0,0.05); */
+    width: 45vw;
+    height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.678);
+}
+
+.right{
+    width: 25vw;
+    height: 100vh;
+}
+
+.main-container{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 150px;
+}
+
+#part-1{
+    width: 50%;    
+}
+
+.thumbnail{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail img{
+    width: 180px;
+    height: 140px;
+    border-top-left-radius: 8px;
+}
+
+#part-2{
+    width: 50%;
+}
+
+#download{
+    padding-right: 50px;
+    float: right;
+    padding-top: 50px;
+}
+
+#part-2 img{
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width:70rem){
+    .upload-center{
+        grid-column-start: 1;
+    }
+
+    #Upscale{
+        display: none;
+    }
+
+    .left{
+        width: 15vw;
+    }
+
+    .middle{
+        width: 60vw;
+    }
+
+    .right{
+        width: 15vw;    
+    }
+
+    #part-2 img{
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -2,7 +2,40 @@
 
 {% block content%}
 
+<div class="main-div">
 
+    <div class="left">
+        
+    </div>
+
+    <div class="middle">
+        {% for item in item_list %}
+
+            <ul>   
+                <div class="main-container">
+
+                    <div id="part-1">
+                        <div class="thumbnail">
+                            <img src="/static/results/{{item}}" alt=""> 
+                        </div>
+                    </div>
+
+                    <div id="part-2">
+                        <a href="/view?pathloc={{path + '\\' + item}}"> <p>{{ item }} </p></a>
+                        <a href="#"><img src="/static/download.png" alt="" id="download" width="30" height="30"></a>
+                    </div>
+                    
+                </div>
+            </ul>
+
+        {% endfor %}
+    </div>
+
+    <div class="right">
+        
+    </div>
+
+</div>
 
 
 
