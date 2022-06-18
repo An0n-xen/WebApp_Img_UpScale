@@ -22,7 +22,7 @@
 
                     <div id="part-2">
                         <a href="/view?pathloc={{path + '\\' + item}}"> <p>{{ item }} </p></a>
-                        <a href="#"><img src="/static/download.png" alt="" id="download" width="30" height="30"></a>
+                        <a href="{{ url_for('download',filename=item)}}"><img src="/static/download.png" alt="" id="download" width="30" height="30"></a>
                     </div>
                     
                 </div>

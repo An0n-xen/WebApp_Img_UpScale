@@ -263,6 +263,8 @@ body{
     border: 1px solid black;
     border-radius: 8px;
     height: 150px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 #part-1{
@@ -280,10 +282,21 @@ body{
     width: 180px;
     height: 140px;
     border-top-left-radius: 8px;
+    margin-right: 40px;
 }
 
 #part-2{
     width: 50%;
+}
+
+#part-2 a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#part-2 p{
+    font-size: 20px;
+    margin-bottom: 0px;
 }
 
 #download{
@@ -322,4 +335,19 @@ body{
         width: 30px;
         height: 30px;
     }
+
+    .thumbnail img{
+        margin-right: 0px;
+    }
+
+    .main-container{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #part-2 p{
+        font-size: 16px;
+    }
+    
+        
 }

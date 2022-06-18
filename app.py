@@ -1,6 +1,6 @@
 import os 
 
-from brain import ImgUpScale
+import brain
 from flask import Flask, render_template,request,redirect
 from flask import request, url_for, send_file, flash
 from werkzeug.utils import secure_filename
@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 #Setting upfolders 
 ini_path = os.path.join(os.getcwd(),'static')
+LR_folder = os.path.join(os.getcwd(),'LR')
 app.config['UPLOAD_FOLDER'] = os.path.join(ini_path,'results')
 
 app.secret_key = "Project Legacy"
@@ -16,8 +17,8 @@ app.secret_key = "Project Legacy"
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 def runUpScale():
-    ImgUpScale.imgUPS()
-
+    brain.initialize()
+    
 def listfiles():
     return os.listdir(app.config['UPLOAD_FOLDER'])
 
@@ -30,6 +31,11 @@ def viewfile():
     filepath = os.path.join(app.config['UPLOAD_FOLDER'],path)
     return send_file(filepath, mimetype='zip')
 
+@app.route('/download/<path:filename>',methods=['GET','POST'])
+def download(filename):
+    my_path = os.path.join(app.config['UPLOAD_FOLDER'],filename)
+    return send_file(my_path,mimetype='rar',as_attachment=True,attachment_filename=filename)
+    
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -44,10 +50,9 @@ def uploadfiles():
         for file in files:
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
-
-        runUpScale()
-        return redirect('/upload_page')
+                file.save(os.path.join(LR_folder,filename))
+    runUpScale()
+    return redirect('/upload_page')
     
 @app.route('/upload_page')
 def uploadpage():
